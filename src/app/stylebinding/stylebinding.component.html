@@ -1,0 +1,23 @@
+<!-- Style binding -->
+<input placeholder="Enter username" [(ngModel)] = "name">
+<p></p>
+<h3 [style.color] ="isHiglight ? 'red' : 'black'">
+  Your name is: {{ name }}
+</h3>
+
+<hr>
+<!-- Class binding -->
+<div [class]="isHiglight ? 'circle' : 'square'"></div>
+<div [class.circle]="!isHiglight" [class.square]="isHiglight"></div>
+
+<hr>
+<!-- ngStyle -->
+<input placeholder="Enter username" [(ngModel)] = "name">
+<p></p>
+<h3 [ngStyle] ="name.length % 2 === 0 ? evenStyle : oddStyle">
+  Your name is: {{ name }}
+</h3>
+
+<hr>
+<!-- ngClass -->
+<div [ngClass]="currentClass"></div>

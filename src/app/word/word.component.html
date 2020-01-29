@@ -1,8 +1,10 @@
-<H3>This is Word Component</H3>
+<H3 [hidden]="forgot">This is Word Component</H3>
 EN: {{en}}<br>
 VN: {{vn}}<br>
 <img [src] = "imageUrl">
-<img src = "{{ img2 }}">
+
 <hr>
 <app-book></app-book>
+<hr>
+<button (click)="toogleForgot()">Toggle Forgot</button>
 

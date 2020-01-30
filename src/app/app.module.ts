@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 // import module for two ways binding
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WordComponent } from './word/word.component';
@@ -16,9 +15,12 @@ import { ListPersonComponent } from './list-person/list-person.component';
 import { ParentComponent } from './parent.component';
 import { ChildComponent } from './child.component';
 import { CardComponent } from './card/card.component';
+import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
+import { RoundPipe } from './round.pipe';
 
 @NgModule({
   declarations: [
+    RoundPipe,
     AppComponent,
     WordComponent,
     BookComponent,
@@ -29,7 +31,8 @@ import { CardComponent } from './card/card.component';
     ListPersonComponent,
     ParentComponent,
     ChildComponent,
-    CardComponent
+    CardComponent,
+    LearnPipeComponent
   ],
   imports: [
     BrowserModule,

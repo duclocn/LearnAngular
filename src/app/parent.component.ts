@@ -4,10 +4,18 @@ import { Component } from '@angular/core';
   selector: `app-parent`,
   template: `
     <h3>{{ value }}</h3>
-    <app-child></app-child>
-  `
+    <app-child (myClick) = "changeValue($event)"></app-child>`
 })
 
 export class ParentComponent {
   value = 0;
+  isAdd = true;
+
+  changeValue(isAdd: boolean) {
+    if (isAdd) {
+      this.value = this.value + 1;
+    } else {
+      this.value = this.value - 1;
+    }
+  }
 }

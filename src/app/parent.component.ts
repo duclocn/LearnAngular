@@ -8,7 +8,7 @@ import { ChildComponent } from './child.component';
 })
 
 export class ParentComponent {
-  @ViewChild(ChildComponent)
+  //@ViewChild(ChildComponent)
   myChild: ChildComponent;
 
   onAddForChild() {

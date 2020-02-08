@@ -6,15 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formtemplate.component.css']
 })
 export class FormtemplateComponent implements OnInit {
-  username = '';
-  password = '';
+
   constructor() { }
 
   ngOnInit() {
   }
 
   onSubmit(nameOfForm) {
-    console.log(nameOfForm.value);
+    console.log(nameOfForm);
   }
 
 }

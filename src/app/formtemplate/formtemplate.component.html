@@ -21,7 +21,15 @@
   <p *ngIf = "txtUserName.touched && txtUserName.errors?.required">Username is required</p>
   <p *ngIf = "txtUserName.touched && txtUserName.errors?.email">Email is invalid</p>
   <br/>
-  <input type = "password" placeholder="Password" ngModel name="password">
+  <input type = "password" placeholder="Password" ngModel #txtPassword="ngModel" name="password" minlength="6" pattern="[a-z]*">
+  <br>
+  <div ngModelGroup="listoflearn">
+    <label><input type="checkbox" [ngModel]="false" name="Angular">Angular</label>
+    <label><input type="checkbox" [ngModel]="false" name="Nodejs">Nodejs</label>
+    <label><input type="checkbox" [ngModel]="false" name="iOS">iOS</label>
+  </div>
   <br>
   <button [disabled] = "formSignIn.invalid">Submit</button>
 </form>
+<p>{{txtPassword.errors | json}}</p>
+<p>{{formSignIn.value | json}}</p>

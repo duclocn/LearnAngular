@@ -30,3 +30,27 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 1. Run command to install core_modules folder: npm install @angular/cli
 2. Run command to install bootstrap: npm install bootstrap jquery --save
+
+## install Nodejs Server
+1. Create a server folder
+2. Run command: npm init -y
+3. Run command: npm install express --save
+4. Run command: npm install body-parser --save
+5. Create an "index.js" file in the server folder.
+6. Content of index.js file:
+    const express = require('express');
+    const jsonParser = require('body-parser').json();
+    const app = express();
+
+    //GET method here
+    app.get('/', (req, res) => res.send('Hello'));
+
+    //POST method here
+    app.post('/signin', jsonParser, (req, res) => {
+      res.send(req.body.name);
+
+    });
+
+    app.listen(3000, () => console.log('Server is running!'));
+
+7. Testing by Postman app

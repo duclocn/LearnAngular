@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // import module for two ways binding
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WordComponent } from './word/word.component';
@@ -18,6 +18,7 @@ import { CardComponent } from './card/card.component';
 import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { RoundPipe } from './round.pipe';
 import { FormtemplateComponent } from './formtemplate/formtemplate.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,14 @@ import { FormtemplateComponent } from './formtemplate/formtemplate.component';
     ChildComponent,
     CardComponent,
     LearnPipeComponent,
-    FormtemplateComponent
+    FormtemplateComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // import module for two ways binding
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WordComponent } from './word/word.component';
@@ -19,6 +18,8 @@ import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 import { RoundPipe } from './round.pipe';
 import { FormtemplateComponent } from './formtemplate/formtemplate.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NestedformgroupComponent } from './nestedformgroup/nestedformgroup.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     CardComponent,
     LearnPipeComponent,
     FormtemplateComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    NestedformgroupComponent
   ],
   imports: [
     BrowserModule,

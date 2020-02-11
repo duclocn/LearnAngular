@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit();" [formGroup] = "FormSignUp">
+  <input placeholder="Email" formControlName = "email">
+  <br/>
+  <input type = "password" placeholder="Password" formControlName = "password">
+  <br>
+  <div formGroupName = "subjects">
+    <label><input type="checkbox" name="Angular" formControlName ="angular">Angular</label>
+    <label><input type="checkbox" name="nodejs" formControlName ="nodejs">Nodejs</label>
+    <label><input type="checkbox" name="iOS" formControlName ="iOS">iOS</label>
+  </div>
+  <br>
+  <button>Submit</button>
+</form>

@@ -7,7 +7,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 // const routes: Routes = [];
 const routesConfig: Routes = [
-  { path: 'detail', component: ContactDetailComponent},
+  { path: 'detail/:id/:name/:phoneNumber', component: ContactDetailComponent},
   { path: '', redirectTo: '/contacts', pathMatch: 'full'},
   { path: '**', component: PagenotfoundComponent }
 ];

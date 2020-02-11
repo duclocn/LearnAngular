@@ -20,6 +20,7 @@ import { FormtemplateComponent } from './formtemplate/formtemplate.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NestedformgroupComponent } from './nestedformgroup/nestedformgroup.component';
+import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { NestedformgroupComponent } from './nestedformgroup/nestedformgroup.comp
     LearnPipeComponent,
     FormtemplateComponent,
     ReactiveformComponent,
-    NestedformgroupComponent
+    NestedformgroupComponent,
+    FormbuilderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
-const routesConfig: Routes = [
-  { path: 'contacts', component: ContactsComponent},
-  { path: 'detail', component: ContactDetailComponent},
-  { path: '', redirectTo: '/contacts', pathMatch: 'full'},
-  { path: '**', component: PagenotfoundComponent }
-];
+
 // import module for two ways binding
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,9 +21,6 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NestedformgroupComponent } from './nestedformgroup/nestedformgroup.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { ContactDetailComponent } from './contact-detail/contact-detail.component';
-import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -49,17 +40,13 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     FormtemplateComponent,
     ReactiveformComponent,
     NestedformgroupComponent,
-    FormbuilderComponent,
-    ContactsComponent,
-    ContactDetailComponent,
-    PagenotfoundComponent
+    FormbuilderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot(routesConfig)
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

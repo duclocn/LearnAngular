@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 const routesConfig: Routes = [
   { path: 'contacts', component: ContactsComponent},
-  { path: 'detail', component: ContactDetailComponent}
+  { path: 'detail', component: ContactDetailComponent},
+  { path: '', redirectTo: '/contacts', pathMatch: 'full'},
+  { path: '**', component: PagenotfoundComponent }
 ];
 // import module for two ways binding
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +29,7 @@ import { NestedformgroupComponent } from './nestedformgroup/nestedformgroup.comp
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { ContactDetailComponent } from './contact-detail/contact-detail.componen
     NestedformgroupComponent,
     FormbuilderComponent,
     ContactsComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
